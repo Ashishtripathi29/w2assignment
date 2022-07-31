@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // write your own find and findIndex function
+// (Hint: using for loop and if else)
+
+// findIndex function created by ownself
+const findArr=[12,3,34,12,35,22]
+function myfindIndex(fn,arr){
+    for(let i=0;i<arr.length;i++){
+        if(fn(arr[i])){
+            return i
+        }
+    }
+    return -1
+}
+console.log(myfindIndex(checkvalue,findArr))
+function checkvalue(x){
+    return x==34
+}
+
+// find function created by ownself
+function myfind(fn,arr){
+    for(let i=0;i<arr.length;i++){
+        if(fn(arr[i])){
+            return arr[i]
+        }
+    }
+    return -1
+}
+console.log(myfind(checkvalue,findArr))
+function checkvalue(x){
+    return x>34
+}
+
+// ======================================================== //
+
+
+
+const practiceData = [[14,21,23,64], [33,46,51,65]]
+/**
+ * requirement one
+ * increment each number by one and output the resultant array using a higher order method and for loop
+ * HINT: use nesting
+ * solution =  [[15,22,24,65], [34,47,52,66]]
+ * 
+ * 
+ * requirement two
+ * from the above array, create an array of array of even numbers using a higher order method and for loop
+ * solution = [[14,64], [46]]
+ */
+const arr5=[]
+const arr6=[]
+practiceData.map(subArr)
+function subArr(index){
+    const arr4=[]
+    const arr3=[]
+    
+   
+    for(let i=0;i<index.length;i++){
+        
+        arr4.push(index[i]+1)
+
+        // for second soluation 
+        if(index[i]%2==0){
+            arr3.push(index[i])
+        }
+
+    }
+    arr5.push(arr4)
+    arr6.push(arr3)
+}
+console.log(arr5)
+console.log(arr6)
+
+
+// ======================================================== //
+
+    const array = [23 , 45,467, 789, 34, 989, 56]
+    //by for loop
+    const arr=[]
+    for (let index = 0; index < array.length; index++) {
+        if(index%2==0){
+            arr.push(array[index]*10)
+        }
+        else{
+            arr.push(array[index]*2)
+        }
+        
+    }
+    console.log(arr)
+
+    // findeIndex
+    arr2=[]
+    let k=true
+    const myarr=array.findIndex(odd_even)
+    function odd_even(index){
+        if(k){
+            arr2.push(index*10)
+            k=false
+        }
+        else{
+            arr2.push(index*2)
+            k=true
+        }
+       
+}
+console.log(arr2)
+    // problem => return an array such that numbers at odd idex are multiplied by 2
+    // and numbers at even index are multiplied by 10
+
+// ======================================================== //
+
+
+
+
+ const carBrands = ["honda", "toyota", "maruti","tata"]
+ const carModel = ["city", "innova", "alto", "nano"]
+ 
+const carObject = {}
+//  using a higher order method, create a carObject variable such that 
+/**
+ * 
+ * {
+ * honda:city,
+ * toyota:innova,
+ * maruti:alto,
+ * tata:nano
+ * }
+ */
+let i=0
+myCarObj={}
+const mycar=carBrands.findIndex(mycarbrand)
+function mycarbrand(index){
+myCarObj[index]=carModel[i]
+i++
+}
+ console.log(myCarObj)
+ 
+// ======================================================== //
+
+
+ /**
+  *  Flattening
+ Use the reduce method 
+ to â€œflattenâ€ an array of arrays into a single array that has all the elements of the original arrays.
+ 
+ const arrays = [[1, 2, 3], [4, 5], [6]];
+ // result =  [1, 2, 3, 4, 5, 6]
+  * 
+  * 
+  */
+  const arrays = [[1, 2, 3], [4, 5], [6]];
+ const newArr=[]
+ arrays.findIndex(concatArr)
+ function concatArr(index){
+ index.findIndex(mysubArr)
+ function mysubArr(myvalue) {
+    newArr.push(myvalue)
+    
+ }   
+ }
+console.log(newArr)
+
+// ======================================================== //
+
+
+ /**
+  * const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
+  * return an array with all words converted into uppercase using higher order function
+  * const countries = ['FINLAND', 'DENMARK', 'SWEDEN', 'NORWAY', 'ICELAND']
+  * 
+  * 
+  * 
+  */
+  const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
+  const myuper=[]
+ const uper=countries.findIndex(myCountry)
+function myCountry(index){
+myuper.push(index.toUpperCase())
+}
+console.log(myuper)
+// ======================================================== //
+
+
+
+
+
+    </script>
+</body>
+</html>
